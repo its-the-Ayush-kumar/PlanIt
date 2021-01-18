@@ -1,0 +1,58 @@
+.back{
+    margin: 0px;
+    padding: 0px;
+    place-items: center;
+    position: relative;
+}
+
+.page{
+    margin: auto auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.task{
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 400px;
+    background-color:#ccc;
+    border-radius: 10px;
+}
+
+#timed-tasks{
+    display: block;
+    background:#333;
+}
+#miscellaneous-tasks{
+    display: none;
+    background:#ccc;
+}
+
+.t-task{
+    background:#ccc;
+    color: #333;
+}
+.m-task{
+    background:#333;
+    color: #ccc;
+}
+
+img{
+    height: 50px;
+    width: 50px;
+}
+
+.button{
+    background: none;
+    margin: 5px;
+    padding: 0px;
+    height: 50px;
+    width: 50px;
+}
+
+#miscTask{
+    display : block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}

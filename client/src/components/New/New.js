@@ -6,6 +6,7 @@ function New() {
 
     useEffect(() => {
         async function addTask(){
+            console.log("adding task!")
             // add task to task list
             let response = await fetch("http://localhost:9000/newTask", {
                 method: "POST",
@@ -14,8 +15,8 @@ function New() {
                     "Content-type": "application/json; charset=UTF-8"
                 }
             });
-            if(response.status === 200) alert("Task added!");
-            else alert("Task could not be added!");
+            if(response.status === 200) console.log("Task added!")
+            else console.log("Task could not be added!")
         }
 
         if(task) addTask();
@@ -30,26 +31,29 @@ function New() {
             endDate: document.getElementById('taskEndDate').value,
             description: document.getElementById('taskDescription').value
         });
+        console.log("Task set!")
     }
 
     return (
         <>
-            <h1>New Task</h1>
-            <form>
-                <div class="form__group field">
-                    <input class="form__field" id="taskHeading" name="name" placeholder="Task" type="text" required/>
-                    <label class="form__label">Name</label>
-                </div>
-                <input id="taskStartTime" type="time"/>
-                <input id="taskEndTime" type="time"/>
-                <input id="taskStartDate" type="date"/>
-                <input id="taskEndDate" type="date"/>
-                <div class="form__group field">
-                    <textarea class="form__field" id="taskDescription" name="description" placeholder="Description"/>
-                    <label class="form__label">Description</label>
-                </div>
-                <button type="submit" onClick={() => createTask()}>Add</button>
-            </form>
+            <div class="back">
+                <h1>New Task</h1>
+                <form>
+                    <div className="form__group field">
+                        <input className="form__field" id="taskHeading" name="name" placeholder="Task" type="text" required/>
+                        <label className="form__label">Name</label>
+                    </div>
+                    <input id="taskStartTime" type="time"/>
+                    <input id="taskEndTime" type="time"/>
+                    <input id="taskStartDate" type="date"/>
+                    <input id="taskEndDate" type="date"/>
+                    <div className="form__group field">
+                        <textarea className="form__field" id="taskDescription" name="description" placeholder="Description"/>
+                        <label className="form__label">Description</label>
+                    </div>
+                    <button type="submit" onClick={() => createTask()}>Add</button>
+                </form>
+            </div>
         </>
     );
 }

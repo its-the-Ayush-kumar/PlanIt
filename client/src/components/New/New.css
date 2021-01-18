@@ -1,3 +1,11 @@
+.back{
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    box-sizing: border-box;
+    place-items: center;
+}
+
 input{
     width: 40%;
     margin: 5px;
@@ -89,17 +97,6 @@ button:hover {
 .form__field:required, .form__field:invalid {
     box-shadow: none;
 }
-  
-/* demo */
-body {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-size: 1.5rem;
-    background-color: #222222;
-}
+
 
 
