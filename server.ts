@@ -32,7 +32,6 @@ let createTasks = async (path: string) => {
       description: record[5]
     })
   })
-  console.log(tasks.length)
   return tasks
 }
 
